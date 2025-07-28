@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import UsersTables from "./UsersTables";
 
-const Users = () => {
+const Users = ({searchParams:{sortOrder}}:{searchParams:{sortOrder:string}}) => {
   return (
-    <div>Users</div>
-  )
-}
+    <div>
+      <h1>Users</h1>
+      <UsersTables sortOrder={sortOrder}/>
+    </div>
+  );
+};
 
-export default Users
+export default Users;
