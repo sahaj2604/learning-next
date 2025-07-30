@@ -26,7 +26,8 @@ export default function RootLayout({
     <html lang="en" data-theme='winter'>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        >
+        <div>divigation</div>
         {children}
       </body>
     </html>
