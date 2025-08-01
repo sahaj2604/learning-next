@@ -1,15 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import AddToCart from "./Add/page";
+import { getServerSession } from "next-auth";
+import { authOptions } from "./api/auth/[...nextauth]/route";
 
-export default function Home() {
+export default async function Home() {
+  const session=await getServerSession(authOptions)
   return (
     <main>
-      <div className="text-xl text-gray-50 bg-red-400 p-5 border-2 rounded-2xl">
-        <Link href={'/users'}>users</Link>
-        <AddToCart/>
-        <button className="btn btn-primary">hello</button>
-      </div>
+      <Image src={}/>
     </main>
   );
 }

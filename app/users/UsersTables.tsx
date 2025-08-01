@@ -7,7 +7,7 @@ interface User {
   email: string;
 }
 
-const UsersTables = async ({sortOrder}:{sortOrder:string}) => {
+const UsersTables = async ({sortOrder}:{sortOrder?:string}) => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users", {
     cache: "default",
   });

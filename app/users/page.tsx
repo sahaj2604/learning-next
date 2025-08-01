@@ -1,11 +1,15 @@
 import React from "react";
 import UsersTables from "./UsersTables";
-
-const Users = ({searchParams:{sortOrder}}:{searchParams:{sortOrder:string}}) => {
+interface UsersPageProps {
+  searchParams?: {
+    sortOrder?: string;
+  };
+}
+const Users = ({searchParams}:UsersPageProps) => {
   return (
     <div>
       <h1>Users</h1>
-      <UsersTables sortOrder={sortOrder}/>
+      <UsersTables sortOrder={searchParams?.sortOrder}/>
     </div>
   );
 };
